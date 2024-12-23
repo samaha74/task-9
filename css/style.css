@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: aliceblue;
+    width: 100vw;
+}
+
+header
+{
+    /* margin-top: 20px ; */
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width:100%;
+    z-index: 5;
+    gap: 5px;
+    .logo{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 10px;
+        margin-left: 40px;
+        margin-right: 180px;
+        display: inline;
+        h3 span{
+            color: rgb(216, 150, 8);        
+        }
+    }
+    
+    nav{
+        margin-top: 10px;
+        .navlinks{
+            margin-right: 10px;
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 12px;
+            transition:text-decoration-color 0.1s ease;
+        }
+        .navlinks:hover{
+            text-decoration: underline rgb(216, 150, 8);
+            text-underline-offset: 3px;
+        }
+        margin-right: 100px;
+    }
+    
+    .info{
+        a{
+            text-decoration: none;
+            color: rgb(216, 150, 8);
+            font-family: "Nova Square", sans-serif; 
+            
+        }
+        h6{
+            font-size: 11px;
+        }
+        margin-top: 10px;
+        display: inline;
+    }
+}
+main{
+    flex-direction: column;
+    position: relative;
+    background-size: 100vw 100vh ;
+    background-repeat: no-repeat;
+    backdrop-filter: brightness(0.3);
+    background-image: url(../image/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh );
+    h1{
+        font-family: "Nova Square", sans-serif; 
+        text-align: center;
+        color: aliceblue;
+        font-weight: 100;
+        max-width: 40%;
+    }
+    .see-project{
+        position: relative;
+        background-color: transparent;
+        color: aliceblue;
+        border: none;
+        padding: 5px;
+    }
+    
+    
+    .arrows{
+        font-size: 17px;
+        color: aliceblue;
+    }
+    
+    .animation:has(#leftarrow){
+        left: 40px;
+    }
+    .animation:has(#rightarrow){
+        right: 40px;
+    }
+    .animation:has(.arrows){
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+        padding: 13px;
+    }
+    .animation::before{
+        content: "";
+        position: absolute;
+        bottom: -0px;
+        left: -0px;
+        width: 10px;
+        height: 10px;
+        border-left: 1px solid gray;
+        border-bottom: 1px solid gray;
+        transition: 0.3s;
+    }
+    .animation::after{
+        content: "";
+        position: absolute;
+        top: -0px;
+        right: -0px;
+        width: 10px;
+        height: 10px;
+        border-right: 1px solid gray;
+        border-top: 1px solid gray;
+        transition: 0.3s;
+    }
+    .animation:hover::after,
+    .animation:hover::before{
+        width: 97%;
+        height: 97%;
+    }
+}
+main::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color: #0000007d;
+    z-index: 1;
+}
+main > *{
+    z-index: 2;
+
+}
+footer{
+    position: absolute;
+    display: flex;
+    top: 90%;
+    left: 0;
+    width:100%;
+    z-index: 5;
+    gap: 5px;
+    .left{
+        margin-left: 40px;
+        align-items: center;
+        display: flex;
+        gap: 5px;
+        font-size: 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        hr{
+            /* display: inline; */
+            height: 0px;
+            width: 40px;
+            background-color: transparent;
+            color: aliceblue;
+        }
+    }
+    .disc{
+        /* align-items: cneter; */
+        margin-left: 260px;
+        margin-right: 220px;
+        a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+    }
+    .icons{
+        i{
+            margin-right: 10px;
+        }
+    }
+}
